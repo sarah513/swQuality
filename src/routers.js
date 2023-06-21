@@ -99,7 +99,7 @@ router.post('/care', async (req, res, next) => {
     const { sender, driver } = req.body
     console.log({ sender, driver })
     let user = await userModel.findOne({ user_name: sender })
-    let isFriends = user.allowed_friends.includes(sender)
+    let isFriends = user.allowed_friends.includes(driver)
     console.log(user)
     if (isFriends) {
         const { last_img, updatedAt } = user
