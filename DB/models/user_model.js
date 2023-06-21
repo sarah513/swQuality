@@ -12,6 +12,10 @@ password:{
 type:String,
 required:true
 },
+allowed_friends:{
+    type:Array,
+    default:[] 
+},
 close_friends:{
     type:Array,
     default:[]
@@ -31,6 +35,9 @@ allow_vehicle:{
 allow_holes_bumps:{
     type:Boolean,
     default:true
+},
+last_img:{
+    type:String
 }
 },{timestamps:true})
 
